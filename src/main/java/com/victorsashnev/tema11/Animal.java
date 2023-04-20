@@ -3,13 +3,13 @@ package com.victorsashnev.tema11;
 public abstract class  Animal {
     private static int counter = 0;
     private final int id;
-    private final String nombre;
+    private  String nombre;
     private  int hambre;
     private final int tamanyo;
     private int energia;
 
-    public  Animal(Animal){
-
+    public  Animal(Animal animal){
+        this(animal.nombre,animal.hambre,animal.energia);
     }
 
     public int getId() {
