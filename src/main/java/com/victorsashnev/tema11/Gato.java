@@ -15,7 +15,7 @@ public class Gato extends Animal{
         }
     @Override
     public String toString() {
-        return "Perro{" +
+        return "Gato{" +
                 "id=" + getId() +
                 ", nombre='" + getNombre() + '\'' +
                 ", hambre=" + getHambre() +

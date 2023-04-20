@@ -8,9 +8,9 @@ public abstract class  Animal {
     private final int tamanyo;
     private int energia;
 
-    public  Animal(Animal animal){
+    /*public  Animal(Animal animal){
         this(animal.nombre,animal.hambre,animal.energia);
-    }
+    }*/
 
     public int getId() {
         return id;
@@ -43,8 +43,29 @@ public abstract class  Animal {
         this.energia = 100;
         this.tamanyo = tamanyo;
     }
+    public Animal(Animal animal){
+        this.id = animal.id;
+        this.nombre = animal.nombre;
+        this.hambre = animal.hambre;
+        this.energia = animal.energia;
+        this.tamanyo = animal.tamanyo;
+    }
     public abstract String emitirSonido();
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Animal animal = (Animal) o;
+
+        return id == animal.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 
     public  void comer(){
         if(hambre > 0)

@@ -4,6 +4,11 @@ public  class Perro extends Animal{
     public Perro(String nombre, int hambre, int tamanyo){
         super(nombre,hambre,tamanyo);
     }
+
+    public Perro(Perro perro) {
+        super(perro);
+    }
+
     @Override
     public String emitirSonido(){
         return "Gauu!";
@@ -12,7 +17,7 @@ public  class Perro extends Animal{
 
     @Override
     public String toString() {
-        return "Gato{" +
+        return "Perro{" +
                 "id=" + getId() +
                 ", nombre='" + getNombre() + '\'' +
                 ", hambre=" + getHambre() +

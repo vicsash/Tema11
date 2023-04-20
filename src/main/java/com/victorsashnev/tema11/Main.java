@@ -1,19 +1,28 @@
 package com.victorsashnev.tema11;
-
+import com.victorsashnev.tema11.Ejer01.Ejer01;
+import com.victorsashnev.tema11.Ejer02.Ejer02;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Random random = new Random();
+        //Ejer01 ejer01 = new Ejer01();
+        Ejer02 ejer02 = new Ejer02();
+
+        /*Random random = new Random();
         Perro perro1 = new Perro("Toby",0,10);
-        Perro perro2 = new Perro("Toby",0,10);
+        Perro perro2 = new Perro(perro1);
 
 
-        Gato jerry = new Gato("Jerry",0,10);
+        // Gato jerry = new Gato("Jerry",0,10);
+
         System.out.println(perro1);
-        System.out.println(jerry);
+        System.out.println(perro2);
+        System.out.println(perro2.equals(perro1));
 
-        Animal[] animals = new Animal[10];
+
+        //System.out.println(jerry);
+
+        /*Animal[] animals = new Animal[10];
         for (int i = 0; i < 10;i++){
             if(random.nextBoolean()){
                 animals[i]= new Gato("gato" +i,0,10);
@@ -32,7 +41,8 @@ public class Main {
             System.out.printf("%s\n", a.emitirSonido());
             System.out.printf("%s\n", a.lavarse());
 
-        }
+        }*/
+
 
     }
 }
