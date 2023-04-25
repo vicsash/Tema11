@@ -1,0 +1,20 @@
+package com.victorsashnev.tema11.Ejer03;
+
+public class CocheCambioAutomatico extends  Coche{
+    public CocheCambioAutomatico(String matricula, int velocidadActual, int marchaActual, int[] posiciones) {
+        super(matricula, velocidadActual, marchaActual, posiciones);
+    }
+
+    @Override
+    public void accelerar(int velocidadActual) {
+        if(velocidadActual<0)
+            super.accelerar(velocidadActual);
+        else
+            super.accelerar(0);
+    }
+
+    @Override
+    public void frenar() {
+        super.frenar();
+    }
+}
