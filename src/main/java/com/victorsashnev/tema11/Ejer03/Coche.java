@@ -2,12 +2,12 @@ package com.victorsashnev.tema11.Ejer03;
 
 import java.util.Arrays;
 
-abstract class Coche {
+public abstract class Coche {
 
     protected final String matricula;
     protected int velocidadActual;
     protected int marchaActual;
-    protected int[] posiciones;
+    protected int[] velocidadesMaximas;
 
     public String getMatricula() {
         return matricula;
@@ -20,27 +20,29 @@ abstract class Coche {
     public int getMarchaActual() {
         return marchaActual;
     }
-    public int[] getPosiciones() {
-        return posiciones;
+    public int[] getVelocidadesMaximas() {
+        return velocidadesMaximas;
     }
 
-    public Coche(String matricula, int velocidadActual, int marchaActual, int[] posiciones) {
+    public Coche(String matricula, int velocidadActual, int marchaActual, int[] velocidadesMaximas) {
         this.matricula = matricula;
         this.velocidadActual = 0;
-        this.marchaActual =0;
-        this.posiciones = posiciones;
-    }
-    public void  accelerar(int velocidadActual) {
-        this.velocidadActual = velocidadActual;
-    }
-    public void frenar() {
-        this.velocidadActual = 0;
+        this.velocidadesMaximas = velocidadesMaximas;
     }
 
-    public void cambiarMarcha(int marchaActual){
-        if(marchaActual<0)
+    public void  accelerar(int incremento) {
+        if(incremento<0)
+            return;
+        this.velocidadActual = velocidadActual + incremento;
+    }
+    public void frenar(){
+        this.velocidadActual = velocidadActual;
+    }
+
+    public void cambiarMarcha(int marcha){
+        if(marcha<0)
             this.marchaActual=0;
-        this.marchaActual = marchaActual;
+        this.marchaActual = marcha;
     }
 
     @Override
@@ -49,7 +51,7 @@ abstract class Coche {
                 "matricula='" + matricula + '\'' +
                 ", velocidadActual=" + velocidadActual +
                 ", marchaActual=" + marchaActual +
-                ", posiciones=" + Arrays.toString(posiciones) +
+                ", posiciones=" + Arrays.toString(velocidadesMaximas) +
                 '}';
     }
 }

@@ -14,8 +14,25 @@ public class Punto {
         this.y = 10;
     }
 
-    public double distance(Punto uno,Punto dos){
+    /**
+     * Metodo de calcular distancia
+     * @param uno
+     * @param dos
+     * @return
+     */
+    public static double distance(Punto uno,Punto dos){
         return Math.sqrt(Math.pow((dos.x-uno.x),2)+Math.pow((dos.y- uno.y),2));
+    }
+    /*
+    * double x = this.x -punto.x
+    * double y = this.y - punto.y
+    * p1.distancia(p2)
+    */
+
+    public double distanceDos(Punto punto){
+        double x = this.x -punto.x;
+        double y = this.y - punto.y;
+        return Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
     }
 
     @Override

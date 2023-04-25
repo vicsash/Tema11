@@ -5,9 +5,13 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        //Ejer01 ejer01 = new Ejer01();
-        Ejer02 ejer02 = new Ejer02();
+        Ejer01 ejer01 = new Ejer01();
+        //Ejer02 ejer02 = new Ejer02();
 
+
+        /*
+        Hacer la pregunata poligono es un punto¿?
+         */
         /*Random random = new Random();
         Perro perro1 = new Perro("Toby",0,10);
         Perro perro2 = new Perro(perro1);

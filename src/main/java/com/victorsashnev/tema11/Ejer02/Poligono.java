@@ -18,11 +18,18 @@ public class Poligono {
         return puntos.size();
     }
 
+    /**
+     * Metodo para hacer el array
+     * recibe el arrray de puntos
+     * y devuelve el perimietro
+     * @param puntos
+     * @return
+     */
     public double perimtero(ArrayList<Punto>puntos){
         double perimetro = 0;
         for(int i = 0; i < puntos.size();i++){
             if(i < puntos.size() - 1)
-            perimetro = perimetro + puntos.get(i).distance(puntos.get(i+1),puntos.get(i));
+                perimetro = perimetro + puntos.get(i).distance(puntos.get(i+1),puntos.get(i));
             if(i == puntos.size()-1)
                 perimetro = perimetro + puntos.get(i).distance(puntos.get(i),puntos.get(0));
         }

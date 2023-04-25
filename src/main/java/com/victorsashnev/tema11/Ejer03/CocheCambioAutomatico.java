@@ -6,7 +6,7 @@ public class CocheCambioAutomatico extends  Coche{
     }
 
     @Override
-    public void accelerar(int velocidadActual) {
+    public void accelerar(int incremento) {
         if(velocidadActual<0)
             super.accelerar(velocidadActual);
         else

@@ -7,7 +7,11 @@ public class Ejer01 {
 
         System.out.println(punto1);
         System.out.println(punto2);
-        System.out.println("La distancia entre 2 puntos es " + punto1.distance(punto1,punto2));
+        System.out.println("La distancia entre 2 puntos es " + Punto.distance(punto1,punto2));
+        System.out.println(punto1.distanceDos(punto2));
     }
 
 }
+/**
+ * representacionde compelmeto a 2 C2
+ */
