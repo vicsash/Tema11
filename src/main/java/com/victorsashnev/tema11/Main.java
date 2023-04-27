@@ -1,12 +1,14 @@
 package com.victorsashnev.tema11;
 import com.victorsashnev.tema11.Ejer01.Ejer01;
 import com.victorsashnev.tema11.Ejer02.Ejer02;
+import com.victorsashnev.tema11.Ejer05.Ejer05;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Ejer01 ejer01 = new Ejer01();
+        //Ejer01 ejer01 = new Ejer01();
         //Ejer02 ejer02 = new Ejer02();
+        Ejer05 ejer05 = new Ejer05();
 
 
         /*

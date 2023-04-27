@@ -33,18 +33,20 @@ public class Television extends Electrodomestico{
     }
 
     @Override
-    public void precioFinal() {
+    public double precioFinal() {
+        super.precioFinal();
         double cambioDePrecio = getPrecioBase();
-        int preciosmart = 0;
-        if(isSmartTV() == true)
+        double preciosmart = 0;
+        double sum;
+        if(isSmartTV())
             preciosmart = 50;
         if(getResulucion()>40){
             cambioDePrecio = cambioDePrecio * 1.30;
         }
 
-        super.precioFinal();
-        precioBase+=preciosmart + cambioDePrecio;
 
+        sum =precioBase+preciosmart + cambioDePrecio;
 
+        return sum;
     }
 }

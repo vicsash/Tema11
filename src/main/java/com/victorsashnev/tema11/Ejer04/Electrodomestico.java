@@ -93,10 +93,10 @@ public abstract class Electrodomestico {
         this.color = COLORES.BLANCO;
     }
 
-    public void precioFinal() {
-        int precioConsumo = consumoEnergetico.getValue();
-        int precioPeso = getPeso();
-
+    public double precioFinal() {
+        double precioConsumo = consumoEnergetico.getValue();
+        double precioPeso = getPeso();
+        double sum;
         if (peso > 0 && peso < 19) {
             precioPeso = 10;
         } else if (peso > 20 && peso < 49){
@@ -106,7 +106,8 @@ public abstract class Electrodomestico {
         } else if(peso > 80){
             precioPeso = 100;
         }
-        this.precioBase = precioBase + precioConsumo + precioPeso;
+        sum= precioBase + precioConsumo + precioPeso;
+        return  sum;
     }
 
     @Override
