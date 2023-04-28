@@ -2,7 +2,7 @@ package com.victorsashnev.tema11.Ejer05;
 
 public class Objects {
     public enum Stack{
-        A(1),B(16),C(64);
+        A(1),B(16),C(64),D(0);
         private final int value;
 
         Stack(int i) {
@@ -29,9 +29,12 @@ public class Objects {
 
     @Override
     public String toString() {
+        if(stack.getValue() ==0 || getObjectName().isEmpty()){
+            return "Objects{" +
+                    ""+
+                    '}';
+        }
         if(stack.getValue()==1){
-
-
             return "Objects{" +
                     "objectName='" + objectName + '\'' +
                     '}';
