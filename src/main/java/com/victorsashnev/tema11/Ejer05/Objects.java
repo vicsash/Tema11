@@ -1,6 +1,6 @@
 package com.victorsashnev.tema11.Ejer05;
 
-public class Objects {
+public abstract class Objects {
     public enum Stack{
         A(1),B(16),C(64),D(0);
         private final int value;
@@ -10,9 +10,9 @@ public class Objects {
         }
         public int getValue(){return  value;}}
 
-    private final String objectName;
+    private String objectName;
 
-    private final Stack stack;
+    private Stack stack;
 
     public String getObjectName() {
         return objectName;
@@ -27,6 +27,14 @@ public class Objects {
         this.stack = stack;
     }
 
+    public void setObjectName(String objectName) {
+        this.objectName = objectName;
+    }
+
+    public void setStack(Stack stack) {
+        this.stack = stack;
+    }
+
     @Override
     public String toString() {
         if(stack.getValue() ==0 || getObjectName().isEmpty()){
@@ -34,7 +42,7 @@ public class Objects {
                     ""+
                     '}';
         }
-        if(stack.getValue()==1){
+       else if(stack.getValue()==1){
             return "Objects{" +
                     "objectName='" + objectName + '\'' +
                     '}';
