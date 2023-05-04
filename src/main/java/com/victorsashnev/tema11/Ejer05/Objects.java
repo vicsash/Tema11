@@ -38,18 +38,14 @@ public abstract class Objects {
     @Override
     public String toString() {
         if(stack.getValue() ==0 || getObjectName().isEmpty()){
-            return "Objects{" +
-                    ""+
-                    '}';
+            return "Objects{"
+                    ;
         }
        else if(stack.getValue()==1){
-            return "Objects{" +
-                    "objectName='" + objectName + '\'' +
-                    '}';
+            return  objectName;
         }else
-            return "Objects{" +
-                    "objectName='" + objectName + '\'' + stack +
-                    '}';
+            return  objectName + '\'' + stack.value
+                    ;
     }
 }
 

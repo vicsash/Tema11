@@ -20,10 +20,9 @@ public class LibMethods {
         int day = randomNumeber(30,1);
         int month = randomNumeber(12,0);
         int year = randomNumeber(2022,1980);
-
-         GregorianCalendar calendar = new GregorianCalendar();
-         calendar.set(year,month,day);
-         return calendar;
+        GregorianCalendar calendar = new GregorianCalendar();
+        calendar.set(year,month,day);
+        return calendar;
     }
     public static int searchIfReferenceInArray(int refence,int counter, int []aray){
         for(int i = 0; i < counter; i++){

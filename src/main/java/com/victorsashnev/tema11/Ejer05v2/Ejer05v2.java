@@ -1,14 +1,8 @@
-package com.victorsashnev.tema11.Ejer05;
-import com.victorsashnev.tema11.LibMenu;
+package com.victorsashnev.tema11.Ejer05v2;
 import com.victorsashnev.tema11.LibMethods;
 
-import javax.swing.*;
-import javax.swing.text.Utilities;
-import java.awt.*;
-import java.util.ArrayList;
-
-public class Ejer05 {
-    public Ejer05(){
+public class Ejer05v2 {
+    public Ejer05v2(){
         int opt1;
         final int SPACES = 7;
         Menu menu = new Menu(SPACES);
@@ -31,7 +25,6 @@ public class Ejer05 {
                     menu.addObject(1,1,"Shovel");
                     break;
                 case 2:
-                    //int ran = LibMethods.randomNumeber(7,1);
                     menu.removeObject(1);
                     break;
                 case 3:

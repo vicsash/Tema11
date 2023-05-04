@@ -1,4 +1,4 @@
-package com.victorsashnev.tema11.Ejer05;
+package com.victorsashnev.tema11.Ejer05v2;
 
 public class Menu {
 
@@ -11,53 +11,53 @@ public class Menu {
     protected void addPickAxe(){
         String obj ="Pickaxe";
         //int numb = 1;
-        invent[counter] = new  Invent(obj, Objects.Stack.A);
+        invent[counter] = new Invent(obj, ItemList.Stack.A);
         counter++;
     }
     protected void addSword(){
         String obj ="Sword";
         //int numb = 1;
-        invent[counter] = new  Invent(obj, Objects.Stack.A);
+        invent[counter] = new Invent(obj, ItemList.Stack.A);
         counter++;
     }
     protected void addStone(){
         String obj ="Stone";
        //int numb = 1;
-        invent[counter] = new  Invent(obj, Objects.Stack.C);
+        invent[counter] = new Invent(obj, ItemList.Stack.C);
         counter++;
     }
     protected void addWood(){
         String obj ="Wood";
         //int numb = 1;
-        invent[counter] = new  Invent(obj, Objects.Stack.C);
+        invent[counter] = new Invent(obj, ItemList.Stack.C);
         counter++;
     }
 
     protected void addEgg(){
         String obj ="Egg";
         //int numb = 1;
-        invent[counter] = new  Invent(obj, Objects.Stack.B);
+        invent[counter] = new Invent(obj, ItemList.Stack.B);
         counter++;
     }
     protected void addEnderPearl(){
         String obj ="Ender Pearl";
         //int numb = 1;
-        invent[counter] = new  Invent(obj, Objects.Stack.B);
+        invent[counter] = new Invent(obj, ItemList.Stack.B);
         counter++;
     }
     protected void removeObject(int num){
-        invent[num].setStack(Objects.Stack.D);
+        invent[num].setStack(ItemList.Stack.D);
         invent[num].setObjectName("");
         counter--;
      }
 
     protected void addObject(int num, int stack,String obj){
          if(stack == 1){
-             invent[num].setStack(Objects.Stack.A);
+             invent[num].setStack(ItemList.Stack.A);
          }else if(stack == 16){
-             invent[num].setStack(Objects.Stack.B);
+             invent[num].setStack(ItemList.Stack.B);
          }else if(stack == 64){
-             invent[num].setStack(Objects.Stack.C);
+             invent[num].setStack(ItemList.Stack.C);
          }
          invent[num].setObjectName(obj);
          counter++;
