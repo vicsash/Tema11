@@ -18,6 +18,8 @@ public class Ejer05 {
         menu.addWood();
         menu.addEnderPearl();
         menu.addEgg();
+        String item;
+        int slotNum,stacknum;
         do{
             System.out.println("1-Add item");
             System.out.println("2-Remove item");
@@ -28,11 +30,22 @@ public class Ejer05 {
             switch( opt1){
 
                 case 1:
-                    menu.addObject(1,1,"Shovel");
+                    System.out.println("Introduce item name");
+                    item = LibMethods.scanString();
+                    System.out.println("Introduce slot number");
+                    slotNum = LibMethods.scanInt();
+                    System.out.println("Introduce if its 1,12 or 64");
+                    stacknum = LibMethods.scanInt();
+                    if((menu.addObject(slotNum,stacknum,item) ==1))
+                    System.out.println("Object added");
+                    else
+                        System.out.println("Error");
                     break;
                 case 2:
-                    //int ran = LibMethods.randomNumeber(7,1);
-                    menu.removeObject(1);
+                    if((menu.removeObject(1) ==1))
+                        System.out.println("Object removed");
+                    else
+                        System.out.println("Error");
                     break;
                 case 3:
                     System.out.println(menu.paintInvetory());

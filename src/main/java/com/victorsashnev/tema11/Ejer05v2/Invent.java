@@ -3,28 +3,28 @@ package com.victorsashnev.tema11.Ejer05v2;
 public class Invent extends ItemList {
 
 
-        private String objectName;
+    private final String item;
+    private final int stack;
 
-        private ItemList.Stack stack;
+    public String getItem() {
+        return item;
+    }
 
-        public String getObjectName() {
-            return objectName;
-        }
+    public int getStack() {
+        return stack;
+    }
 
-        public ItemList.Stack getStack() {
-            return stack;
-        }
+    public Invent(String item, int stack) {
+        this.item = item;
+        this.stack = stack;
+    }
 
-
-
-        public void setObjectName(String objectName) {
-            this.objectName = objectName;
-        }
-
-        public void setStack(ItemList.Stack stack) {
-            this.stack = stack;
-        }
-
-
+    @Override
+    public String toString() {
+        return "Invent{" +
+                "item='" + item + '\'' +
+                ", stack=" + stack +
+                '}';
     }
 }
+

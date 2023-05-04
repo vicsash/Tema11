@@ -6,12 +6,7 @@ public class Ejer05v2 {
         int opt1;
         final int SPACES = 7;
         Menu menu = new Menu(SPACES);
-        menu.addPickAxe();
-        menu.addStone();
-        menu.addSword();
-        menu.addWood();
-        menu.addEnderPearl();
-        menu.addEgg();
+
         do{
             System.out.println("1-Add item");
             System.out.println("2-Remove item");
@@ -22,10 +17,8 @@ public class Ejer05v2 {
             switch( opt1){
 
                 case 1:
-                    menu.addObject(1,1,"Shovel");
                     break;
                 case 2:
-                    menu.removeObject(1);
                     break;
                 case 3:
                     System.out.println(menu.paintInvetory());
@@ -37,7 +30,6 @@ public class Ejer05v2 {
                     break;
 
             }
-
         }while( opt1 != 0);
 
 

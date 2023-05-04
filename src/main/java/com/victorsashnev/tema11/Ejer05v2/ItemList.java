@@ -3,12 +3,42 @@ package com.victorsashnev.tema11.Ejer05v2;
 import java.util.HashMap;
 
 public abstract class ItemList {
-     private static HashMap<Integer,String> object = new HashMap<Integer, String>();
+     protected static HashMap<String,Integer> itemList = new HashMap<String,Integer>();
+     private String object;
+     private int stack;
 
-        public ItemList(){
-            object.put(1,"Sword");
-            object.put(1,"Shovel");
-            object.put()
-        }
+     public static HashMap<String, Integer> getItemList() {
+          return itemList;
+     }
+
+     public String getObject() {
+          return object;
+     }
+
+     public int getStack() {
+          return stack;
+     }
+
+     public ItemList(String object, int stack) {
+          this.object = object;
+          this.stack = stack;
+     }
+
+     public ItemList() {
+          itemList.put("Sword",1);
+          itemList.put("PickAxe",1);
+          itemList.put("Wood",64);
+          itemList.put("Dirt",64);
+          itemList.put("Stone",64);
+          itemList.put("EnderPearl",16);
+          itemList.put("Egg",16);
+     }
+
+     public int confirmItem(String name){
+          if( itemList.containsKey(name)){
+               return 1;
+          }
+          return 0;
+     }
 }
 

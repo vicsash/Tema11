@@ -10,59 +10,83 @@ public class Menu {
     }
     protected void addPickAxe(){
         String obj ="Pickaxe";
-        //int numb = 1;
+
         invent[counter] = new  Invent(obj, Objects.Stack.A);
         counter++;
     }
     protected void addSword(){
         String obj ="Sword";
-        //int numb = 1;
         invent[counter] = new  Invent(obj, Objects.Stack.A);
         counter++;
     }
     protected void addStone(){
         String obj ="Stone";
-       //int numb = 1;
         invent[counter] = new  Invent(obj, Objects.Stack.C);
         counter++;
     }
     protected void addWood(){
         String obj ="Wood";
-        //int numb = 1;
         invent[counter] = new  Invent(obj, Objects.Stack.C);
         counter++;
     }
 
     protected void addEgg(){
         String obj ="Egg";
-        //int numb = 1;
         invent[counter] = new  Invent(obj, Objects.Stack.B);
         counter++;
     }
     protected void addEnderPearl(){
         String obj ="Ender Pearl";
-        //int numb = 1;
         invent[counter] = new  Invent(obj, Objects.Stack.B);
         counter++;
     }
-    protected void removeObject(int num){
+
+    /**
+     * Remove an object
+     * @param num
+     * @return
+     */
+    protected int removeObject(int num){
+        if(invent[num].getObjectName().isEmpty())
+            return 0;
         invent[num].setStack(Objects.Stack.D);
         invent[num].setObjectName("");
         counter--;
+        return 1;
      }
 
-    protected void addObject(int num, int stack,String obj){
+    /**
+     * Add an object
+     * @param num
+     * @param stack
+     * @param obj
+     * @return
+     */
+    protected int addObject(int num, int stack,String obj){
+        if(!(invent[num].getObjectName().isEmpty()))
+            return 0;
          if(stack == 1){
              invent[num].setStack(Objects.Stack.A);
+             invent[num].setObjectName(obj);
          }else if(stack == 16){
              invent[num].setStack(Objects.Stack.B);
+             invent[num].setObjectName(obj);
          }else if(stack == 64){
              invent[num].setStack(Objects.Stack.C);
-         }
-         invent[num].setObjectName(obj);
+             invent[num].setObjectName(obj);
+         } else if(stack ==0){
+             return 0;
+         }else
+             return 0;
+
          counter++;
+         return 1;
      }
 
+    /**
+     * Show/paint incentory
+     * @return
+     */
     public String paintInvetory(){
         StringBuilder sb = new StringBuilder();
         sb.append(lines());
@@ -76,6 +100,10 @@ public class Menu {
         return sb.toString();
     }
 
+    /**
+     * lines to best simulate the upper and bottom line of box
+     * @return
+     */
     protected String lines(){
         StringBuilder sb = new StringBuilder();
         int len = 0;

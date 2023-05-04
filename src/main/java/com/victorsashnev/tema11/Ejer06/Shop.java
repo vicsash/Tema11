@@ -20,6 +20,17 @@ public class Shop {
         members = new ArrayList<>();
     }
 
+    /**
+     * add movie
+     * @param movieName
+     * @param format
+     * @param author
+     * @param calendar
+     * @param duration
+     * @param actor
+     * @param actress
+     * @return
+     */
     protected  int addMovie(String movieName, String format,
                         String author, GregorianCalendar calendar, int duration,
                         String actor,String actress){
@@ -32,6 +43,15 @@ public class Shop {
         return 1;
     }
 
+    /**
+     * Add game
+     * @param movieName
+     * @param format
+     * @param author
+     * @param calendar
+     * @param platform
+     * @return
+     */
     protected  int addGame(String movieName, String format,
                         String author, GregorianCalendar calendar, String platform){
         int ret;
@@ -43,6 +63,14 @@ public class Shop {
         return 1;
     }
 
+    /**
+     * Add new member with age confirmation
+     * @param nif
+     * @param name
+     * @param birthdate
+     * @param city
+     * @return
+     */
     protected  int addMemeber(String nif, String name, GregorianCalendar birthdate,String city){
         if(confirmIfMemberExists(nif) == 0){
             return 0;
@@ -52,12 +80,18 @@ public class Shop {
         int month = now.get(GregorianCalendar.MONTH);
         int day = now.get(GregorianCalendar.DAY_OF_MONTH);
         now.set(year,month,day);
-        if(birthdate.getTimeInMillis()-now.getTimeInMillis() < 18)
+        if(birthdate.getTimeInMillis()-now.getTimeInMillis() /1000 / 60 / 24 /365 < 18)
             return 2;
         members.add(new Member(nif,name,birthdate,city));
         return 1;
     }
 
+    /**
+     * Confirm if Media exsists
+     * @param author
+     * @param title
+     * @return
+     */
     protected  int confirmIfMediaExists(String author,String title){
         if(multimedia.isEmpty())
             return 0;
@@ -67,6 +101,12 @@ public class Shop {
         }
         return 1;
     }
+
+    /**
+     * Confirm if memeber exists
+     * @param nif
+     * @return
+     */
     protected  int confirmIfMemberExists(String nif){
         if(members.isEmpty())
             return 0;
@@ -77,6 +117,10 @@ public class Shop {
         return 1;
     }
 
+    /**
+     * Show all multimedia
+     * @return
+     */
     protected String showMultimedia(){
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < multimedia.size() ;i++){

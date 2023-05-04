@@ -10,7 +10,7 @@ public class Member {
     private final String name;
     private final GregorianCalendar birthdate;
     private final String city;
-    private boolean Debt;
+    private int Debt;
     public String getNif() {
         return nif;
     }
@@ -24,7 +24,7 @@ public class Member {
         return city;
     }
 
-    public void setDebt(boolean debt) {
+    public void setDebt(int debt) {
         Debt = debt;
     }
 
@@ -33,7 +33,7 @@ public class Member {
         this.name = name;
         this.birthdate = birthdate;
         this.city = city;
-        Debt = false;
+        Debt = 0;
     }
 
 
