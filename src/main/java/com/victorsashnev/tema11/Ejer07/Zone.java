@@ -1,26 +1,21 @@
 package com.victorsashnev.tema11.Ejer07;
 
-public abstract class Zone{
-    private int id;
-    private static int counterid =0;
-    private static  int couterRow=0;
-    private final int row;
-    private final int SEATPERROW=20;
-    private final int  MAXNUMROW =5;
-    private final int MAXSEATS = SEATPERROW * MAXNUMROW;
+public class Zone{
 
-    public Zone(int id, int row) {
-        this.id = ++counterid;
-        if(couterRow > SEATPERROW){
-            couterRow = 0;
-        }
-        this.row = ++couterRow;
+    private final int[] zona ={1,2,3,4};
+    private int[][] seatsZone;
+
+    public Zone(int[] capacity) {
+
     }
 
-    public boolean confirmSeat(){
-        if(counterid > MAXNUMROW){
-            return false;
-        }
-        return true;
-    }
+    private boolean confirmIfZoneFull(){
+       for(int i = 0; i < seatsZone.length;i++){
+           for (int j = 0;j < seatsZone[i].length;j++){
+                if(!(seatsZone[i][j])
+                    return false;
+           }
+       }
+       return true;
+   }
 }
