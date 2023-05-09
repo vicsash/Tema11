@@ -2,7 +2,7 @@ package com.victorsashnev.tema11.Ejer07.Entrance;
 
 import com.victorsashnev.tema11.Ejer07.Zone;
 
-public class Entrance extends Zone{
+public class Entrance{
     protected final int numEntrada;
     protected  int cont = 0;
 
@@ -10,17 +10,9 @@ public class Entrance extends Zone{
         return numEntrada;
     }
 
-    public Entrance(INFLUXPRICE gamePrice, int numEntrada) {
-        super(gamePrice);
+    public Entrance(int numEntrada) {
+        super();
         this.numEntrada = ++ cont;
-    }
-
-    @Override
-    public String toString() {
-        return "Entrance{" +
-                "numEntrada=" + numEntrada +
-                ", cont=" + cont +
-                '}';
     }
 }
 

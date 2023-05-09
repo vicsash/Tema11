@@ -2,6 +2,8 @@ package com.victorsashnev.tema11.Ejer07.Entrance;
 
 import com.victorsashnev.tema11.LibMethods;
 
+import java.util.Arrays;
+
 public class Vip extends Entrance {
 
     private final String match;
@@ -17,33 +19,17 @@ public class Vip extends Entrance {
         return alfaNumerico;
     }
 
-    public Vip(INFLUXPRICE gamePrice, int numEntrada, String match, String alfaNumerico) {
-        super(gamePrice, numEntrada);
+    public Vip( int numEntrada, String match, String alfaNumerico) {
+        super( numEntrada);
         this.match = match;
-        int numRand = LibMethods.randomNumeber(MAXSEAT,0);
-        int randRow;
-        int randomCol;
-        boolean full;
-        for(int i = 0; i < numRand ; i++ ){
-            full = false;
-            do {
-                randRow = LibMethods.randomNumeber(10,0);
-                randomCol = LibMethods.randomNumeber(10,0);
-                if(seatZone[randRow][randomCol] == 0){
-                    seatZone[randRow][randomCol] = 1;
-                    full =true;
-                }
-            }while(full);
-            this.alfaNumerico = alfaNumRand();
-        }
+        alfaNumerico = alfaNumRand();
+
 
     }
-
-
     private String alfaNumRand(){
         String letter = "ABCDEFGHIJKLMNOPQRSTVWXYZ";
         String numbers = "1234567890";
-        int num = 10;
+        int num = 15;
         int choice;
         int letterRange;
         int numberRange;
@@ -60,4 +46,10 @@ public class Vip extends Entrance {
         return alfanumerico.toString();
     }
 
+    /*@Override
+    public String toString() {
+        return "Vip{" +
+                "seatZone=" + Arrays.toString(seatZone) +
+                '}';
+    }*/
 }
