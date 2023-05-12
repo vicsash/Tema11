@@ -33,7 +33,7 @@ public class LibMethods {
         return  -1;
     }
 
-    public static int searchStringInArray(String refence,int counter, int []aray){
+    public static int searchIfStringInArray(String refence,int counter, int []aray){
         for(int i = 0; i < counter; i++){
             String search = String.valueOf(aray[i]);
             if( refence.equalsIgnoreCase(search)){

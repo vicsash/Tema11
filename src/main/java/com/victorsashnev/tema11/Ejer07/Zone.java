@@ -1,5 +1,7 @@
 package com.victorsashnev.tema11.Ejer07;
 
+import com.victorsashnev.tema11.Ejer07.Entrance.Entrance;
+
 import java.util.Arrays;
 
 public class Zone{
@@ -22,11 +24,10 @@ public class Zone{
 
     protected final int MAXSEAT = ROWS * COLM;
 
+    private Entrance[] entrance;
+    private final int TYPEOFENTRACE = 1;
     protected Zone(){
-        seatZone = new int[ROWS][COLM];
-        for (int[] ints : seatZone) {
-            Arrays.fill(ints, 0);
-        }
+       entrance = new Entrance[TYPEOFENTRACE];
     }
 
     public INFLUXPRICE getGamePrice() {
@@ -35,16 +36,7 @@ public class Zone{
     public int[][] getSeatZone() {
         return seatZone;
     }
-    public Zone(INFLUXPRICE gamePrice) {
-        this.gamePrice = gamePrice;
 
-    }
-
-
-
-   /* public void takeSeat(){
-
-    }*/
 
     @Override
     public String toString() {

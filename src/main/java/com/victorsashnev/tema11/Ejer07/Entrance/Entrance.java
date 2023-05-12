@@ -5,13 +5,11 @@ import com.victorsashnev.tema11.Ejer07.Zone;
 public class Entrance extends Zone{
     protected final int numEntrada;
     protected  int cont = 0;
-
     public int getNumEntrada() {
         return numEntrada;
     }
 
-    public Entrance(INFLUXPRICE gamePrice, int numEntrada) {
-        super(gamePrice);
+    public Entrance() {
         this.numEntrada = ++ cont;
     }
 

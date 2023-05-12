@@ -1,4 +1,7 @@
 package com.victorsashnev.tema11.Ejer07;
 
 public class Ejer07 {
+    public Ejer07(){
+         Tienda tienda = new Tienda();
+    }
 }
