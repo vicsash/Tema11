@@ -1,15 +1,11 @@
 package com.victorsashnev.tema11.Ejer07;
 
-import com.victorsashnev.tema11.Ejer07.Entrance.Entrance;
-
 public class Zone{
+    private int id;
+    private TypeEntrance.Type typeEntrance;
 
-    private Entrance entrance;
-    protected Zone(){
-       entrance = new Entrance();
-    }
-
-    public Zone(Entrance entrance) {
-        this.entrance = entrance;
+    public Zone(int id, TypeEntrance.Type typeEntrance) {
+        this.id = id;
+        this.typeEntrance = typeEntrance;
     }
 }

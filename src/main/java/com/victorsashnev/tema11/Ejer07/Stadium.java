@@ -29,8 +29,10 @@ public class Stadium {
                 int vip = NUMZONASVIP;
                 for(int i = 0; i < NUMZONAS;i++){
                         if(vip > 0){
-                                this.zone = new Zone(i,TypeEntrance.Type.VIP)
-                        }
+                                zone[i] = new Zone(i,TypeEntrance.Type.VIP);
+                                i--;
+                        }else
+                                zone[i] = new Zone(i,TypeEntrance.Type.NORMAL);
                 }
         }
 }

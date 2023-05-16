@@ -52,9 +52,6 @@ public class Match {
     public String getCurMatch() {
         return curMatch;
     }
-    public Entrance entrance(){
-        return null;
-    }
 
     public Match(String homeTeam, String visitTeam, GregorianCalendar calendar) {
         this.matchId = ++cont;
