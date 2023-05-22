@@ -8,10 +8,11 @@ import java.util.GregorianCalendar;
 
 public class Stadium {
         Faker faker = new Faker();
-        protected final int NUMZONAS = 8;
-        protected final int NUMZONASVIP = 2;
-        protected final int PRICE = 5;
-        protected final int MAXMATCHES =20;
+        public final int NUMZONAS = 8;
+        public final int NUMZONASVIP = 2;
+        public final int PRICE = 5;
+        public final int MAXMATCHES = 20;
+
         protected Zone[] zone;
         protected ArrayList<Match> matches;
 
@@ -25,11 +26,11 @@ public class Stadium {
                 calendar = LibMethods.dateWithRand();
                 matches.add(new Match(home,vistor,calendar));
         }
-        private void generateZones(int NUMZONASVIP){
+        protected void generateZones(int NUMZONASVIP){
                 int vip = NUMZONASVIP;
                 for(int i = 0; i < NUMZONAS;i++){
                         if(vip > 0){
-                                this.zone = new Zone(i,TypeEntrance.Type.VIP)
+                                this.zone = new Zone[]{new Zone()};
                         }
                 }
         }
