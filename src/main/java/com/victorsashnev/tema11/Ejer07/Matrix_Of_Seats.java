@@ -1,7 +1,5 @@
 package com.victorsashnev.tema11.Ejer07;
 
-import com.victorsashnev.tema11.LibMethods;
-
 import java.util.Arrays;
 
 public class Matrix_Of_Seats {
@@ -10,7 +8,6 @@ public class Matrix_Of_Seats {
         return seats;
     }
     private int counter = 1;
-
     /**
      * Creation of method to make an empty zone
      */
@@ -18,26 +15,7 @@ public class Matrix_Of_Seats {
         this.seats = new Seat[Zone.ROWS_IN_ZONE][Zone.SEATS_IN_ROW];
         for(int i = 1; i <= seats.length;i++){
             for (int j = 1; j <= seats[i].length;j++){
-                    this.seats[i][j] = new Seat(false, counter);
-            }
-        }
-    }
-
-    public void OccupySeast(){}
-
-    /**
-     *A mothod to randmoly occupy seats
-     * Maybe needs deletion
-     */
-    public void fillRandomSeats() {
-        for(int i = 1; i <= seats.length;i++){
-            for (int j = 1; j <= seats[i].length;j++){
-                if(LibMethods.randomNumeber(6,0)<5){
-                    this.seats[i][j] = new Seat(false, counter);
-                    counter++;
-                }else
-                    this.seats[i][j] = new Seat(true, counter);
-                counter++;
+                    this.seats[i][j] = new Seat( counter);
             }
         }
     }

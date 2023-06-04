@@ -43,10 +43,7 @@ public class Television extends Electrodomestico{
         if(getResulucion()>40){
             cambioDePrecio = cambioDePrecio * 1.30;
         }
-
-
         sum =precioBase+preciosmart + cambioDePrecio;
-
         return sum;
     }
 }

@@ -1,7 +1,7 @@
 package com.victorsashnev.tema11.Ejer07;
 
 public class Seat {
-    protected boolean occupied;
+    protected boolean occupied ;
     protected int seatId;
     protected int counter = 0;
     private final int numero;
@@ -18,8 +18,8 @@ public class Seat {
         return numero;
     }
 
-    public Seat(boolean occupied, int numero) {
-        this.occupied = occupied;
+    public Seat( int numero) {
+        this.occupied = false;
         this.seatId = ++counter;
         this.numero = numero;
     }

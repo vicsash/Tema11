@@ -5,7 +5,7 @@ public class Menu {
     private Invent[] invent;
     private static int counter =0 ;
 
-    protected Menu(int NUMB)1{
+    protected Menu(int NUMB){
         invent = new Invent[NUMB];
     }
     protected void addPickAxe(){
