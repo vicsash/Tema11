@@ -175,7 +175,7 @@ public class FileUtilities {
                 System.out.println("Introduce a number to confirm if it is prime.");
                 System.out.println("Introduce 0 to end the process");
                 try(BufferedWriter writer = new BufferedWriter(new FileWriter(f,true))){
-                    text = scanUtil.scanString();
+                    text = scanUtil.scanString("Inset text to write in file");
                     if(text.equalsIgnoreCase("End"))
                         writer.write(text);
                 } catch (IOException e) {

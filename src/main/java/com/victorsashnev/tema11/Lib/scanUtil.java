@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class scanUtil {
     static Random rand = new Random();
     static Scanner scanner = new Scanner(System.in);
-    public static int scanInt(){
+    public static int scanInt(String description){
         int loop = -1;
         int num =0;
         do {
@@ -19,7 +19,7 @@ public class scanUtil {
         }while(loop == -1);
         return num;
     }
-    public static double scanDouble(){
+    public static double scanDouble(String description){
         int loop = -1;
         double num =0;
         do {
@@ -32,12 +32,12 @@ public class scanUtil {
         }while(loop == -1);
         return num;
     }
-    public static String scanString(){
+    public static String scanString(String description){
         String text;
         return text = scanner.nextLine();
     }
 
-    public  static char scanChar(){
+    public  static char scanChar(String description){
         char caracter;
         return caracter = scanner.next().charAt(0);
     }
