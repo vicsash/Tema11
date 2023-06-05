@@ -33,7 +33,6 @@ public class Member {
         this.name = name;
         this.birthdate = birthdate;
         this.city = city;
-        Debt = 0;
     }
 
 

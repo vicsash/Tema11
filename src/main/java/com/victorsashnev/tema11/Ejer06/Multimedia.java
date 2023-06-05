@@ -1,5 +1,6 @@
 package com.victorsashnev.tema11.Ejer06;
 
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 public abstract class Multimedia {
@@ -10,6 +11,7 @@ public abstract class Multimedia {
     private final String author;
     private final TYPE format;
     private final GregorianCalendar calendar;
+    private ArrayList<Rent> rent;
 
     public String getTitle() {
         return title;
@@ -32,10 +34,19 @@ public abstract class Multimedia {
         this.author = author;
         this.format = format;
         this.calendar = calendar;
+        //Initially empty
+        this.rent = new ArrayList<>();
     }
 
+    /**
+     *Could be used with multimedia as an object
+     */
     public boolean confirmMedia(String author, String title){
         return this.author.equalsIgnoreCase(author) && this.title.equalsIgnoreCase(title);
+    }
+
+    public void rentAnItem(){
+
     }
 
     @Override

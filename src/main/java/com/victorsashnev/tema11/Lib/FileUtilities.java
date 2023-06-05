@@ -1,11 +1,12 @@
 package com.victorsashnev.tema11.Lib;
 
 import java.io.*;
+import java.util.Objects;
 
 public class FileUtilities {
     public static String confirmIfFile_Or_Directory(File f){
         StringBuilder sb = new StringBuilder();
-        for(File fil : f.listFiles()){
+        for(File fil : Objects.requireNonNull(f.listFiles())){
             if(fil.isFile())
                sb.append("Es un file");
             if(fil.isDirectory())

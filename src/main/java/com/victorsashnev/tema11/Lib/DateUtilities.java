@@ -1,20 +1,45 @@
 package com.victorsashnev.tema11.Lib;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class DateUtilities {
+    static SimpleDateFormat fmt = new SimpleDateFormat("dd-MMM-yyyy");
     static Random rand = new Random();
     public static int randomNumeber(int max, int min){
         int numb;
         return numb= rand.nextInt(max- min + 1) + min;
     }
-    public static GregorianCalendar dateWithRand(){
+    public static GregorianCalendar randomDate(){
         int day = randomNumeber(30,1);
         int month = randomNumeber(11,0);
         int year = randomNumeber(2022,1980);
+        GregorianCalendar calendar = new GregorianCalendar();
+        calendar.set(year,month,day);
+        return calendar;
+    }
+
+    /**
+     * Needs to become string in order to work
+     * @param date which was made
+     * @return string
+     * @throws ParseException
+     */
+    public static String formatDateToShow_DayMonthYear(GregorianCalendar date) throws ParseException {
+        StringBuilder sb = new StringBuilder();
+        fmt.setCalendar(date);
+        sb.append(fmt.format(date.getTime()));
+        return sb.toString();
+    }
+
+    public static GregorianCalendar CurrentDate(){
+        GregorianCalendar date = new GregorianCalendar();
+        int year = date.get(GregorianCalendar.YEAR);
+        int month = date.get(GregorianCalendar.MONTH);
+        int day = date.get(GregorianCalendar.DAY_OF_MONTH);
         GregorianCalendar calendar = new GregorianCalendar();
         calendar.set(year,month,day);
         return calendar;
