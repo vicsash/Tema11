@@ -1,5 +1,7 @@
 package com.victorsashnev.tema11.Lib;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 public class OrderArray {
@@ -27,5 +29,18 @@ public class OrderArray {
         int randomPos = random.nextInt(arrayLength + 1);
         changePos_IntArray(array, randomPos, arrayLength);
         return array;
+    }
+    public static void reverseArray_String(String[] array) {
+        Arrays.sort(array, Collections.reverseOrder());
+        System.out.println(
+                "Array in descending order: "
+                        + Arrays.toString(array));
+    }
+
+    public static void reverseArray_Int(Integer[] array) {
+        Arrays.sort(array, Collections.reverseOrder());
+        System.out.println(
+                "Array in descending order: "
+                        + Arrays.toString(array));
     }
 }

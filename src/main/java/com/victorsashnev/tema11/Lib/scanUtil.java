@@ -38,6 +38,7 @@ public class scanUtil {
     }
 
     public  static char scanChar(String description){
+        System.out.println(description);
         char caracter;
         return caracter = scanner.next().charAt(0);
     }
