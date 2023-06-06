@@ -13,4 +13,11 @@ public class OtherUtilities {
             return true;
         return false;
     }
+    public static void pause() {
+        try {
+            Thread.sleep(300);
+        } catch (Exception e) {
+            System.out.println("WARNING -> ERROR");
+        }
+    }
 }
